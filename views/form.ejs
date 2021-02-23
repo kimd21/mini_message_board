@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Form</title>
 </head>
 <body>
+  <a href='/'>< Back</a><br><br>
+  <h1>New Message</h1><br>
   <form method="POST" action="/new">
     <!--put your input and buttons in here-->
+    <input name="messageUser" type="text" placeholder="Name" required>
+    <input name="messageText" type="text" placeholder="Enter a message" required>
+    <input type="submit" value="Submit">
   </form>
 </body>
 </html>

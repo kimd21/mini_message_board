@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= title %></title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <a href='/new'>New Message</a><br><br>
+    <h1><%= title %></h1><br>
+      <% messages.forEach(message => { %>
+        <ul>
+          <li>
+            <div><sub><%= message.added %></sub></div>
+            <div><strong><%= message.user %></strong></div>
+            <%= message.text %>
+          </li><br><br>
+        </ul>
+      <% }); %>
   </body>
 </html>
